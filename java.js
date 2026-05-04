@@ -1,4 +1,5 @@
-const supabase = window.supabase.createClient(
+const { createClient } = supabase;
+const supabaseClient = createClient(
   "https://qynecqcmphokafalrady.supabase.co",
   "sb_publishable_L2Lzl2orAs1OtZdTY7Nm9g_6YMEFvqD"
 );
@@ -90,7 +91,11 @@ const finalFoto = document.getElementById("finalFoto");
 
 document.getElementById("btnEnviar4").addEventListener("click", async () => {
 
-  await supabase.from("respuestas").insert([data]);
+  try {
+    await supabaseClient.from("respuestas").insert([data]);
+  } catch (e) {
+    console.error("Error guardando:", e);
+  }
 
   overlay4.style.display = "none";
   videoFinal.style.display = "block";

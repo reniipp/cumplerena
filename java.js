@@ -20,7 +20,7 @@ video.addEventListener("ended", () => {
 });
 
 video.addEventListener("loadedmetadata", () => {
-  const duracionMs = video.duration * 1000;
+  const duracionMs = video.duration * 1500;
   setTimeout(() => {
     if (!overlay.classList.contains("visible")) {
       video.style.transition = "opacity 0.5s ease";
@@ -31,7 +31,7 @@ video.addEventListener("loadedmetadata", () => {
         overlay.classList.add("visible");
       }, 600);
     }
-  }, duracionMs + 800);
+  }, duracionMs + 500);
 });
 
 // Act I → Act II

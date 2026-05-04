@@ -9,14 +9,20 @@ const overlay2 = document.getElementById("overlay2");
 const overlay3 = document.getElementById("overlay3");
 const overlay4 = document.getElementById("overlay4");
 
-video.addEventListener("ended", () => {
-  video.style.transition = "opacity 0.5s ease";
-  video.style.opacity = 0;
-  fondo.style.opacity = 1;
+video.addEventListener("loadedmetadata", () => {
+  const duracionMs = video.duration * 1000;
+  
   setTimeout(() => {
-    video.style.display = "none";
-    overlay.classList.add("visible");
-  }, 600);
+    if (!overlay.classList.contains("visible")) {
+      video.style.transition = "opacity 0.5s ease";
+      video.style.opacity = 0;
+      fondo.style.opacity = 1;
+      setTimeout(() => {
+        video.style.display = "none";
+        overlay.classList.add("visible");
+      }, 600);
+    }
+  }, duracionMs);
 });
 
 setTimeout(() => {

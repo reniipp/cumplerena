@@ -1,4 +1,3 @@
-const { createClient } = supabase;
 const supabaseClient = createClient(
   "https://qynecqcmphokafalrady.supabase.co",
   "sb_publishable_L2Lzl2orAs1OtZdTY7Nm9g_6YMEFvqD"

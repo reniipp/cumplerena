@@ -1,3 +1,15 @@
+const supabase = window.supabase.createClient(
+  "https://qynecqcmphokafalrady.supabase.co",
+  "sb_publishable_L2Lzl2orAs1OtZdTY7Nm9g_6YMEFvqD"
+);
+
+let data = {
+  nombre: "",
+  panchos: "",
+  asistencia: ""
+};
+
+
 document.fonts.ready.then(() => {
   document.body.classList.add("fonts-loaded");
 });
@@ -37,6 +49,7 @@ video.addEventListener("loadedmetadata", () => {
 // Act I → Act II
 document.getElementById("btnEnviar1").addEventListener("click", () => {
   const nombre = document.getElementById("nombre").value.trim();
+data.nombre = nombre;
   if (!nombre) { document.getElementById("nombre").focus(); return; }
   overlay.style.display = "none";
   overlay2.style.display = "flex";
@@ -58,11 +71,15 @@ document.getElementById("btnEnviar3").addEventListener("click", () => {
 });
 
 function seleccionar(opcion) {
+  data.panchos = opcion;
+
   document.getElementById("corazonSi").classList.toggle("oculto", opcion !== 'si');
   document.getElementById("corazonNo").classList.toggle("oculto", opcion !== 'no');
 }
 
 function seleccionar4(opcion) {
+  data.asistencia = opcion;
+
   document.getElementById("corazonSi4").classList.toggle("oculto", opcion !== 'si');
   document.getElementById("corazonNo4").classList.toggle("oculto", opcion !== 'no');
 }
@@ -71,7 +88,10 @@ const videoFinal = document.getElementById("videoFinal");
 const finalVideo = document.getElementById("finalVideo");
 const finalFoto = document.getElementById("finalFoto");
 
-document.getElementById("btnEnviar4").addEventListener("click", () => {
+document.getElementById("btnEnviar4").addEventListener("click", async () => {
+
+  await supabase.from("respuestas").insert([data]);
+
   overlay4.style.display = "none";
   videoFinal.style.display = "block";
   finalVideo.play();

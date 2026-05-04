@@ -8,8 +8,8 @@ console.log("Client:", supabaseClient);
 
 let data = {
   nombre: "",
-  panchos: "",
-  asistencia: ""
+  panchos: "si",
+  asistencia: "si"
 };
 
 

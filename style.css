@@ -86,6 +86,14 @@ video, #fondo {
     -webkit-text-stroke: 0.5px #212121;
 }
 
+.titulo2 {
+    font-size: 30px;
+    font-family: 'AstonScript', serif;
+    margin-top: -100px;
+    color: #89c6e8;
+    -webkit-text-stroke: 0.5px #212121;
+}
+
 .input-linea {
   position: relative;
   width: 90%;

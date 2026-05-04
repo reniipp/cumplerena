@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+  seleccionar("si");
+  seleccionar4("si");
+});
+
 const supabaseClient = window.supabase.createClient(
   "https://qynecqcmphokafalrady.supabase.co",
   "sb_publishable_L2Lzl2orAs1OtZdTY7Nm9g_6YMEFvqD"

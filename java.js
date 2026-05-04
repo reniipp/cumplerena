@@ -29,7 +29,7 @@ setTimeout(() => {
       overlay.classList.add("visible");
     }, 600);
   }
-}, 1580);
+}, 1400);
 
 // Act I → Act II
 document.getElementById("btnEnviar1").addEventListener("click", () => {

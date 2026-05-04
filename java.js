@@ -3,6 +3,9 @@ const supabaseClient = window.supabase.createClient(
   "sb_publishable_L2Lzl2orAs1OtZdTY7Nm9g_6YMEFvqD"
 );
 
+console.log("Supabase:", window.supabase);
+console.log("Client:", supabaseClient);
+
 let data = {
   nombre: "",
   panchos: "",

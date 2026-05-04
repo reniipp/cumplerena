@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cumple Rena</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kyy7ezv.css">
+</head>
+<body>
+
+    <div id="container">
+        <video id="introVideo" autoplay muted playsinline>
+            <source src="img/intro.mp4" type="video/mp4">
+        </video>
+        <div id="fondo"></div>
+    </div>
+
+    <div id="overlay">
+        <div class="contenido">
+            <p class="act">Act I</p>
+            <h1 class="titulo">Quién sos?</h1>
+
+            <div class="input-linea">
+                <input type="text" id="nombre" placeholder="Tu Nombre" autocomplete="off">
+            </div>
+
+            <p class="aviso">(si pones un nombre ficticio, estás desinvitado)</p>
+            <button class="btnEnviar" id="btnEnviar1">Enviar</button>
+        </div>
+    </div>
+
+
+    <div id="overlay2">
+        <div class="contenido">
+            <p class="act">Act II</p>
+            <h1 class="titulo">El Evento</h1>
+
+            <div class="info-linea">
+                <span class="label">fecha</span>
+                <span class="valor">24 may</span>
+                <a class="btn-calendario" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Cumple+Rena+🌭🎉🎤&dates=20250524T203000/20250524T233000&location=Evaristo+Carriego+965" target="_blank">
+                    <img src="img/calendario.png" alt="Agendar">
+                </a>
+            </div>
+            <div class="info-linea">
+                <span class="label">hora</span>
+                <span class="valor">20:30 hs</span>
+            </div>
+            <div class="info-linea">
+                <span class="label">lugar</span>
+                <span class="valor">Evaristo Carriego 965</span>
+                <a class="btn-calendario" href="https://maps.app.goo.gl/2qFytX4F9NHnB2Aj7" target="_blank">
+                    <img src="img/ubicacion.png" alt="Ubicacion">
+                </a>
+            </div>
+
+            <button class="btnConfirmar">Confirmar asistencia</button>
+        </div>
+    </div>  
+
+
+    <div id="overlay3">
+        <div class="contenido">
+            <p class="act">Act III</p>
+            <h1 class="titulo">Panchos?</h1>
+
+            <div class="opcion-linea" id="opcionSi" onclick="seleccionar('si')">
+                <div class="corazon-placeholder">
+                    <img src="img/corazon.png" class="corazon" id="corazonSi">
+                </div>
+                <span class="valor">Si</span>
+            </div>
+            <div class="opcion-linea" id="opcionNo" onclick="seleccionar('no')">
+                <div class="corazon-placeholder">
+                    <img src="img/corazon.png" class="corazon oculto" id="corazonNo">
+                </div>
+                <span class="valor">No</span>
+            </div>
+
+            <button class="btnEnviar" id="btnEnviar3">Enviar</button>
+        </div>
+    </div>
+
+    <div id="overlay4">
+        <div class="contenido">
+            <p class="act">Act VI</p>
+            <h1 class="titulo">Podés venir?</h1>
+
+            <div class="opcion-linea" id="opcionSi4" onclick="seleccionar4('si')">
+                <div class="corazon-placeholder">
+                    <img src="img/corazon.png" class="corazon" id="corazonSi4">
+                </div>
+                <span class="valor">Si</span>
+            </div>
+            <div class="opcion-linea" id="opcionNo4" onclick="seleccionar4('no')">
+                <div class="corazon-placeholder">
+                    <img src="img/corazon.png" class="corazon oculto" id="corazonNo4">
+                </div>
+                <span class="valor">No</span>
+            </div>
+
+            <button class="btnEnviar" id="btnEnviar4">Enviar</button>
+        </div>
+    </div>
+
+    <div id="videoFinal">
+        <video id="finalVideo" playsinline>
+            <source src="img/final.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="finalFoto"></div>
+
+
+
+
+
+
+
+    <script src="java.js"></script>
+</body>
+</html>

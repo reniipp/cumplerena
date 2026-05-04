@@ -280,3 +280,7 @@ video, #fondo {
   opacity: 0;
   transition: opacity 1s ease;
 }
+
+.btnEnviar, .btnConfirmar {
+  color: #212121;
+}

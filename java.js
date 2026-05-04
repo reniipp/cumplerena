@@ -1,10 +1,7 @@
-let supabaseClient;
-window.addEventListener("load", () => {
-  const supabaseClient = window.supabase.createClient(
+const supabaseClient = window.supabase.createClient(
   "https://qynecqcmphokafalrady.supabase.co",
   "sb_publishable_L2Lzl2orAs1OtZdTY7Nm9g_6YMEFvqD"
-  );
-});
+);
 
 let data = {
   nombre: "",

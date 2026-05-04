@@ -1,3 +1,4 @@
+let supabaseClient;
 window.addEventListener("load", () => {
   const supabaseClient = window.supabase.createClient(
   "https://qynecqcmphokafalrady.supabase.co",

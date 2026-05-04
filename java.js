@@ -31,7 +31,7 @@ video.addEventListener("loadedmetadata", () => {
         overlay.classList.add("visible");
       }, 600);
     }
-  }, duracionMs + 600);
+  }, duracionMs + 800);
 });
 
 // Act I → Act II

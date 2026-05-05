@@ -25,18 +25,6 @@ document.addEventListener("click", () => {
   }
 }, { once: true });
 
-music.volume = 0;
-music.play();
-
-let vol = 0;
-const fade = setInterval(() => {
-  if (vol < 0.3) {
-    vol += 0.01;
-    music.volume = vol;
-  } else {
-    clearInterval(fade);
-  }
-}, 100);
 
 
 document.fonts.ready.then(() => {

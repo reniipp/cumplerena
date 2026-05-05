@@ -17,6 +17,27 @@ let data = {
   asistencia: "si"
 };
 
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+  }
+}, { once: true });
+
+music.volume = 0;
+music.play();
+
+let vol = 0;
+const fade = setInterval(() => {
+  if (vol < 0.3) {
+    vol += 0.01;
+    music.volume = vol;
+  } else {
+    clearInterval(fade);
+  }
+}, 100);
+
 
 document.fonts.ready.then(() => {
   document.body.classList.add("fonts-loaded");
